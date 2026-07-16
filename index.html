@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goshen Business & Career Advisory Services</title>
+
+    <meta name="description"
+          content="Goshen Business and Career Advisory Services strengthens institutional capability, leadership systems and career development pathways that enable sustainable economic and social impact.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root{
+            --primary:#111111;
+            --primary-light:#1f1f1f;
+            --gold:#D4AF37;
+            --gold-light:#F2C94C;
+            --white:#ffffff;
+            --background:#f8f8f8;
+            --text:#4a4a4a;
+            --border:#e8e8e8;
+        }
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:'DM Sans', sans-serif;
+            background:var(--background);
+            color:var(--text);
+            line-height:1.7;
+        }
+
+        img{
+            max-width:100%;
+        }
+
+        .container{
+            width:min(1200px,90%);
+            margin:auto;
+        }
+
+        /* HERO */
+
+        .hero{
+            position:relative;
+            overflow:hidden;
+            min-height:85vh;
+            display:flex;
+            align-items:center;
+            background:linear-gradient(
+                135deg,
+                var(--primary) 0%,
+                var(--primary-light) 100%
+            );
+        }
+
+        .hero::before{
+            content:"";
+            position:absolute;
+            width:600px;
+            height:600px;
+            border-radius:50%;
+            background:rgba(212,175,55,.08);
+            top:-150px;
+            right:-150px;
+            filter:blur(30px);
+        }
+
+        .hero::after{
+            content:"";
+            position:absolute;
+            width:400px;
+            height:400px;
+            border-radius:50%;
+            background:rgba(242,201,76,.05);
+            bottom:-100px;
+            left:-100px;
+            filter:blur(30px);
+        }
+
+        .navbar{
+            position:absolute;
+            top:0;
+            width:100%;
+            padding:1.5rem 0;
+            z-index:10;
+        }
+
+        .nav-content{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .hero-logo{
+            width:100px;
+            height:auto;
+
+            display:block;
+
+            margin-bottom:2rem;
+        }
+
+        .container{
+            width:min(1200px,90%);
+            margin:auto;
+
+            display:flex;
+            flex-direction:column;
+        }
+
+        .logo span{
+            color:var(--gold-light);
+        }
+
+        .hero-content{
+            color:white;
+            max-width:700px;
+
+            margin:0 auto;
+            text-align:center;
+        }
+
+        .tag{
+            display:inline-block;
+            padding:.5rem 1rem;
+            border:1px solid rgba(255,255,255,.2);
+            border-radius:999px;
+            margin-bottom:1.5rem;
+            font-size:.9rem;
+            background:rgba(255,255,255,.05);
+        }
+
+        h1{
+            font-family:'Playfair Display', serif;
+            font-size:clamp(2.6rem,6vw,5rem);
+            line-height:1.1;
+            margin-bottom:1.5rem;
+        }
+
+        .highlight{
+            color:var(--gold-light);
+        }
+
+        .hero p{
+            font-size:1.1rem;
+            max-width:700px;
+            color:rgba(255,255,255,.85);
+            margin-bottom:2rem;
+        }
+
+        .buttons{
+            display:flex;
+            gap:1rem;
+            flex-wrap:wrap;
+        }
+
+        .btn{
+            text-decoration:none;
+            padding:1rem 1.8rem;
+            border-radius:999px;
+            transition:.3s;
+            font-weight:600;
+        }
+
+        .btn-primary{
+            background:var(--gold);
+            color:black;
+        }
+
+        .btn-primary:hover{
+            transform:translateY(-2px);
+        }
+
+        .btn-secondary{
+            border:1px solid rgba(255,255,255,.25);
+            color:white;
+        }
+
+        .btn-secondary:hover{
+            background:rgba(255,255,255,.08);
+        }
+
+        /* SECTION */
+
+        section{
+            padding:6rem 0;
+        }
+
+        .section-title{
+            text-align:center;
+            margin-bottom:3rem;
+        }
+
+        .section-title h2{
+            font-family:'Playfair Display', serif;
+            color:var(--primary);
+            font-size:2.5rem;
+            margin-bottom:.75rem;
+        }
+
+        .section-title p{
+            max-width:700px;
+            margin:auto;
+        }
+
+        /* CARDS */
+
+        .grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:1.5rem;
+        }
+
+        .card{
+            background:white;
+            padding:2rem;
+            border-radius:16px;
+            border:1px solid var(--border);
+            transition:.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-5px);
+        }
+
+        .card h3{
+            color:var(--primary);
+            margin-bottom:1rem;
+        }
+
+        .gold-line{
+            width:60px;
+            height:4px;
+            background:var(--gold);
+            margin-bottom:1rem;
+            border-radius:999px;
+        }
+
+        /* MESSAGE */
+
+        .message{
+            background:white;
+        }
+
+        .message-box{
+            max-width:900px;
+            margin:auto;
+            text-align:center;
+            background:var(--primary);
+            color:white;
+            padding:3rem;
+            border-radius:20px;
+        }
+
+        .message-box h2{
+            font-family:'Playfair Display', serif;
+            margin-bottom:1rem;
+            color:var(--gold-light);
+        }
+
+        /* CONTACT */
+
+        .contact-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:1.5rem;
+        }
+
+        .contact-card{
+            background:white;
+            padding:2rem;
+            border-radius:16px;
+            border:1px solid var(--border);
+        }
+
+        .contact-card h3{
+            color:var(--primary);
+            margin-bottom:.5rem;
+        }
+
+        .contact-card a{
+            color:var(--gold);
+            text-decoration:none;
+            font-weight:600;
+            min-width:0;
+
+            overflow-wrap:break-word;
+            word-break:break-word;
+        }
+
+        .contact-card a,
+        .contact-card p{
+            font-size:.95rem;
+        }
+
+        footer{
+            background:var(--primary);
+            color:white;
+            text-align:center;
+            padding:2rem 1rem;
+        }
+
+        @media(max-width:768px){
+
+            .hero{
+                min-height:auto;
+                padding:8rem 0 5rem;
+            }
+
+            .buttons{
+                flex-direction:column;
+            }
+
+            .btn{
+                text-align:center;
+            }
+
+            .message-box{
+                padding:2rem;
+            }
+            .hero-logo{
+                width:160px;
+                margin-bottom:3rem;
+            }
+
+            .hero-content{
+                text-align:center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+
+    <div class="container">
+
+        <img
+            src="goshen_logo.jfif"
+            alt="Goshen Advisory Logo"
+            class="hero-logo"
+        >
+
+        <div class="hero-content">
+
+            <div class="tag">
+                Website Launching Soon
+            </div>
+
+            <h1>
+                Goshen Business & Career Advisory Services
+            </h1>
+
+            <p>
+                Our new digital platform is currently under development.
+            </p>
+            <div class="buttons">
+                <a href="mailto:Goshen.bcadvisory@outlook.com" class="btn btn-primary">
+                    Contact Us
+                </a>
+
+                <a href="https://www.linkedin.com/company/goshen-business-and-career-advisory-sc/" class="btn btn-secondary">
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+    </div>
+
+</header>
+
+    <section class="message">
+
+        <div class="container">
+
+            <div class="message-box">
+
+                <h2>Our New Website Is Currently Under Development</h2>
+
+                <p>
+                    We are building a new digital platform that will provide insights,
+                    training programme announcements, institutional development resources
+                    and information about our advisory services.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>
+                    We'd be pleased to discuss how Goshen can support your institution,
+                    organisation or development initiative.
+                </p>
+            </div>
+
+            <div class="contact-grid">
+
+                <div class="contact-card">
+                    <h3>Email</h3>
+                    <a href="mailto:Goshen.bcadvisory@outlook.com">
+                        Goshen.bcadvisory@outlook.com
+                    </a>
+                </div>
+
+                <!-- <div class="contact-card">
+                    <h3>Phone</h3>
+                    <p>+27 XX XXX XXXX</p>
+                </div> -->
+
+                <div class="contact-card">
+                    <h3>Location</h3>
+                    <p>East London, South Africa</p>
+                </div>
+
+                <div class="contact-card">
+                    <h3>LinkedIn</h3>
+                    <a href="https://www.linkedin.com/company/goshen-business-and-career-advisory-sc/">
+                        Follow Goshen Advisory
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        © 2026 Goshen Business & Career Advisory Services. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
