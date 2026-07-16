@@ -55,6 +55,9 @@
             min-height:85vh;
             display:flex;
             align-items:center;
+
+            padding-bottom:4rem;
+
             background:linear-gradient(
                 135deg,
                 var(--primary) 0%,
@@ -86,6 +89,11 @@
             filter:blur(30px);
         }
 
+        .hero::before,
+        .hero::after{
+            z-index:1;
+        }
+
         .navbar{
             position:absolute;
             top:0;
@@ -101,12 +109,15 @@
         }
 
         .hero-logo{
+            position:absolute;
+
+            top:0;
+            left:0;
+
             width:100px;
             height:auto;
 
-            display:block;
-
-            margin-bottom:2rem;
+            z-index:10;
         }
 
         .container{
@@ -124,9 +135,12 @@
         .hero-content{
             color:white;
             max-width:700px;
+            position:relative;
+            z-index:5;
 
             margin:0 auto;
             text-align:center;
+            padding-top:120px;
         }
 
         .tag{
@@ -327,13 +341,17 @@
             .message-box{
                 padding:2rem;
             }
+
             .hero-logo{
-                width:160px;
-                margin-bottom:3rem;
+                width:140px;
+
+                top:0;
+                left:0;
             }
 
             .hero-content{
                 text-align:center;
+                padding-top:90px;
             }
         }
     </style>
@@ -342,13 +360,12 @@
 
     <header class="hero">
 
+    <img
+        src="goshen_logo.jfif"
+        alt="Goshen Advisory Logo"
+        class="hero-logo"
+    >
     <div class="container">
-
-        <img
-            src="goshen_logo.jfif"
-            alt="Goshen Advisory Logo"
-            class="hero-logo"
-        >
 
         <div class="hero-content">
 
